@@ -33,3 +33,5 @@ def above_average(names, scores):
         return names_list
     else:
         return []
+
+print('Тест')
