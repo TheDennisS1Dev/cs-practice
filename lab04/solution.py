@@ -16,8 +16,8 @@ def average(scores):
 
 def ranking(names, scores):
     if (len(names) > 0) and (len(scores) > 0):
-        arg_sort = sorted(range(len(scores)), key=lambda i: scores[i])
-        return list(names[i] for i in arg_sort)[::-1]
+        arg_sort = sorted(range(len(scores)), key=lambda i: scores[i], reverse=True)
+        return list(names[i] for i in arg_sort)
     else:
         return []
 
