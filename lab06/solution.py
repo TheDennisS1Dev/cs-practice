@@ -35,5 +35,3 @@ def only_in_first(first, second):
         result.sort()
 
     return result
-
-print(only_in_first(["иванов", "петрова"], ["петрова", "котов"]))
