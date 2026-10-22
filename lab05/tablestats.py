@@ -38,6 +38,8 @@ def total_minutes(rows, kind):
     return sum
 
 def to_csv(counts):
+    result = "тип,количество\n"
+
     if len(counts) != 0:
         result = "тип,количество\n"
         types = sorted(counts, key=lambda c: c[0])
@@ -45,6 +47,4 @@ def to_csv(counts):
         for type in types:
             result += type + f",{counts[type]}\n"
 
-        return result
-    else:
-        return ""
+    return result
