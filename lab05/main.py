@@ -1,6 +1,6 @@
 from tablestats import *
 
-path = 'events.csv'
+path = input()
 
 with open(path, encoding="utf-8") as table:
     lines = read_rows(table)
@@ -11,7 +11,7 @@ line_count = 0
 for cnt in types:
     line_count += float(types[cnt])
 
-print(line_count)
+print(int(line_count))
 print(len(types))
 print(total_minutes(lines, 'ошибка'))
 
