@@ -3,7 +3,8 @@ def count_items(values):
 
     if len(values) != 0:
         for item in values:
-            if item not in result:
+            print(result)
+            if item in result:
                 result[item] += 1
             else:
                 result.update({item: 1})
