@@ -3,7 +3,6 @@ def count_items(values):
 
     if len(values) != 0:
         for item in values:
-            print(result)
             if item in result:
                 result[item] += 1
             else:
@@ -15,24 +14,9 @@ def unique_sorted(values):
     return sorted(set(values))
 
 def common(first, second):
-    result = []
-
-    if (len(first) != 0) or (len(second) != 0):
-        for item in first:
-            if item in second:
-                result.append(item)
-        result.sort()
-
-    return result
+    return list(set(first) & set(second))
 
 def only_in_first(first, second):
-    result = []
+    return list(set(first) - set(second))
 
-    if (len(first) != 0) or (len(second) != 0):
-        for item in first:
-            if item not in second:
-                result.append(item)
-
-        result.sort()
-
-    return result
+print(common(["иванов", "петрова"], ["петрова", "котов"]))
