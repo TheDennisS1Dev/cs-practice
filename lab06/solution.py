@@ -14,9 +14,7 @@ def unique_sorted(values):
     return sorted(set(values))
 
 def common(first, second):
-    return list(set(first) & set(second))
+    return sorted(list(set(first) & set(second)))
 
 def only_in_first(first, second):
-    return list(set(first) - set(second))
-
-print(common(["иванов", "петрова"], ["петрова", "котов"]))
+    return sorted(list(set(first) - set(second)))
