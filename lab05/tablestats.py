@@ -33,9 +33,12 @@ def total_minutes(rows, kind):
 
     for line in rows:
         if line['тип'] == kind:
-            sum += float(line['минуты'].replace(',', "."))
+            try:
+                sum += float(line['минуты'].replace(',', "."))
+            except ValueError:
+                continue
 
-    return sum
+    return round(sum, 1)
 
 def to_csv(counts):
     result = "тип,количество\n"
