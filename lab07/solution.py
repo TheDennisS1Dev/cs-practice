@@ -28,9 +28,3 @@ def column_range(matrix, column):
     else:
         array = np.array(matrix)
         return np.round(np.max(array[:, column]) - np.min(array[:, column]), 6)
-
-testarr = np.asarray([[1, 2, 3], [4, 5, 6], [7, 8, 9]], dtype=float)
-print(block(testarr, [0, 2], [1, 2]))
-print(column_means([[1, 2], [3, 4], [5, 6]]))
-print(column_range([[1, 2], [5, 7]], 1))
-print(reshape_rows([12, 14.5, 11, 13, 15.5, 10.5], 3))
