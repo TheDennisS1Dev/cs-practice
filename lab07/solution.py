@@ -28,3 +28,5 @@ def column_range(matrix, column):
     else:
         array = np.array(matrix)
         return np.round(np.max(array[:, column]) - np.min(array[:, column]), 6)
+
+print("test")
