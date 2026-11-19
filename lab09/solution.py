@@ -1,13 +1,10 @@
 import numpy as np
 
 def make_hours() -> list[int]:
-    return np.arange(0, 21, 3).tolist()
+    return np.arange(0, 24, 3).tolist()
 
 def vector_report(values: list[float]) -> dict:
     arr = np.asarray(values, dtype=float)
-
-    if len(values) >= 3:
-        return {}
 
     
     return {
